@@ -25,14 +25,15 @@ export default function Home() {
      <Pricing1 />
      <IntegrationsSection />
      <CallToAction />
-     <WallOfLoveSection />
+     <WallOfLoveSection /> 
+     
      {/* <Pricing2 /> */}
-     <Features12 />
+      <Features12 />
      {/* <Features10 /> */}
      <Features1 />
      <Features4 />
      <FAQsTwo />
-     <FooterSection />
+     <FooterSection /> 
     </>
   );
 }
