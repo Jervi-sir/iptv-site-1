@@ -1,16 +1,16 @@
 'use client'
 import Link from 'next/link'
-import { Logo } from './logo'
+import { Logo } from '../../components/logo'
 import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import React from 'react'
 import { cn } from '@/lib/utils'
 
 const menuItems = [
-    { name: 'Features', href: '#link' },
-    { name: 'Solution', href: '#link' },
-    { name: 'Pricing', href: '#link' },
-    { name: 'About', href: '#link' },
+    { name: 'Features', href: '#features' }, // Highlights IPTV benefits
+    { name: 'Pricing', href: '#pricing' },   // Key for sales
+    { name: 'Feedback', href: '#feedback' },  // Replaces "About" for customer help
+    { name: 'Why IPTV', href: '#why_iptv' }, // Showcases available channels
 ]
 
 export const HeroHeader = () => {
@@ -24,6 +24,7 @@ export const HeroHeader = () => {
         window.addEventListener('scroll', handleScroll)
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
+
     return (
         <header>
             <nav
@@ -82,15 +83,15 @@ export const HeroHeader = () => {
                                     variant="outline"
                                     size="sm"
                                     className={cn(isScrolled && 'lg:hidden')}>
-                                    <Link href="#">
-                                        <span>Login</span>
+                                    <Link href="/login">
+                                        <span>Log In</span>
                                     </Link>
                                 </Button>
                                 <Button
                                     asChild
                                     size="sm"
                                     className={cn(isScrolled && 'lg:hidden')}>
-                                    <Link href="#">
+                                    <Link href="/signup">
                                         <span>Sign Up</span>
                                     </Link>
                                 </Button>
@@ -98,8 +99,8 @@ export const HeroHeader = () => {
                                     asChild
                                     size="sm"
                                     className={cn(isScrolled ? 'lg:inline-flex' : 'hidden')}>
-                                    <Link href="#">
-                                        <span>Get Started</span>
+                                    <Link href="/signup">
+                                        <span>Start Streaming</span>
                                     </Link>
                                 </Button>
                             </div>

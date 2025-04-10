@@ -1,6 +1,6 @@
 'use client'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-import { ChartBarIncreasingIcon, Database, Fingerprint, IdCard } from 'lucide-react'
+import { Tv, Globe, Smartphone, Video } from 'lucide-react' // Updated icons to match IPTV features
 import Image from 'next/image'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
@@ -12,30 +12,30 @@ export default function Features12() {
 
     const images = {
         'item-1': {
-            image: '/charts.png',
-            alt: 'Database visualization',
+            image: '/channels-preview.png', // Replace with an image showing a channel grid or TV interface
+            alt: 'Thousands of Channels',
         },
         'item-2': {
-            image: '/music.png',
-            alt: 'Security authentication',
+            image: '/global-content.png', // Replace with an image of international flags or global content
+            alt: 'Worldwide Content Access',
         },
         'item-3': {
-            image: '/mail2.png',
-            alt: 'Identity management',
+            image: '/multi-device.png', // Replace with an image of devices (TV, phone, tablet)
+            alt: 'Multi-Device Streaming',
         },
         'item-4': {
-            image: '/payments.png',
-            alt: 'Analytics dashboard',
+            image: '/hd-streaming.png', // Replace with an image showcasing HD/4K quality
+            alt: 'High-Quality Streaming',
         },
     }
 
     return (
-        <section className="relative py-12 md:py-20 lg:py-32">
+        <section id='why_iptv' className="relative py-12 md:py-20 lg:py-32">
             <div className="bg-linear-to-b absolute inset-0 -z-10 sm:inset-6 sm:rounded-b-3xl dark:block dark:to-[color-mix(in_oklab,var(--color-zinc-900)_75%,var(--color-background))]"></div>
             <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16 lg:space-y-20 dark:[--color-border:color-mix(in_oklab,var(--color-white)_10%,transparent)]">
                 <div className="relative z-10 mx-auto max-w-2xl space-y-6 text-center">
-                    <h2 className="text-balance text-4xl font-semibold lg:text-6xl">The foundation for AI</h2>
-                    <p>Lyra is evolving to be more than just the models. It supports an entire to the APIs and platforms helping developers and businesses innovate.</p>
+                    <h2 className="text-balance text-4xl font-semibold lg:text-6xl">Why Our IPTV Stands Out</h2>
+                    <p>Enjoy a seamless streaming experience with features designed for entertainment lovers everywhere.</p>
                 </div>
 
                 <div className="grid gap-12 sm:px-12 md:grid-cols-2 lg:gap-20 lg:px-0">
@@ -47,38 +47,38 @@ export default function Features12() {
                         <AccordionItem value="item-1">
                             <AccordionTrigger>
                                 <div className="flex items-center gap-2 text-base">
-                                    <Database className="size-4" />
-                                    Database Visualization
+                                    <Tv className="size-4" />
+                                    Thousands of Channels
                                 </div>
                             </AccordionTrigger>
-                            <AccordionContent>Lyra is evolving to be more than just the models. It supports an entire to the APIs and platforms helping developers and businesses innovate.</AccordionContent>
+                            <AccordionContent>Access over 10,000 live TV channels, from sports and news to movies and kids’ shows, all in one place.</AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-2">
                             <AccordionTrigger>
                                 <div className="flex items-center gap-2 text-base">
-                                    <Fingerprint className="size-4" />
-                                    Advanced Authentication
+                                    <Globe className="size-4" />
+                                    Worldwide Content Access
                                 </div>
                             </AccordionTrigger>
-                            <AccordionContent>Lyra is evolving to be more than just the models. It supports an entire to the APIs and platforms helping developers and businesses innovate.</AccordionContent>
+                            <AccordionContent>Stream international channels and on-demand content from over 50 countries, no matter where you are.</AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-3">
                             <AccordionTrigger>
                                 <div className="flex items-center gap-2 text-base">
-                                    <IdCard className="size-4" />
-                                    Identity Management
+                                    <Smartphone className="size-4" />
+                                    Multi-Device Streaming
                                 </div>
                             </AccordionTrigger>
-                            <AccordionContent>Lyra is evolving to be more than just the models. It supports an entire to the APIs and platforms helping developers and businesses innovate.</AccordionContent>
+                            <AccordionContent>Watch on your TV, phone, tablet, or laptop—seamless streaming across all your devices.</AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-4">
                             <AccordionTrigger>
                                 <div className="flex items-center gap-2 text-base">
-                                    <ChartBarIncreasingIcon className="size-4" />
-                                    Analytics Dashboard
+                                    <Video className="size-4" />
+                                    High-Quality Streaming
                                 </div>
                             </AccordionTrigger>
-                            <AccordionContent>Lyra is evolving to be more than just the models. It supports an entire to the APIs and platforms helping developers and businesses innovate.</AccordionContent>
+                            <AccordionContent>Experience crystal-clear HD and 4K streams with 99.9% uptime for uninterrupted viewing.</AccordionContent>
                         </AccordionItem>
                     </Accordion>
 

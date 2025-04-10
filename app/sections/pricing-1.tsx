@@ -5,26 +5,31 @@ import { Check } from 'lucide-react'
 
 export default function Pricing1() {
     return (
-        <section className="py-16 md:py-32">
+        <section id='pricing' className="py-16 md:py-32">
             <div className="mx-auto max-w-6xl px-6">
                 <div className="mx-auto max-w-2xl space-y-6 text-center">
-                    <h1 className="text-center text-4xl font-semibold lg:text-5xl">Pricing that Scales with You</h1>
-                    <p>Gemini is evolving to be more than just the models. It supports an entire to the APIs and platforms helping developers and businesses innovate.</p>
+                    <h1 className="text-center text-4xl font-semibold lg:text-5xl">Affordable IPTV Plans for Everyone</h1>
+                    <p>Choose a plan that fits your streaming needs and enjoy thousands of channels, movies, and shows with no contracts or hidden fees.</p>
                 </div>
 
                 <div className="mt-8 grid gap-6 md:mt-20 md:grid-cols-3">
                     <Card className="flex flex-col bg-transparent">
                         <CardHeader>
-                            <CardTitle className="font-medium">Free</CardTitle>
-                            <span className="my-3 block text-2xl font-semibold">$0 / mo</span>
-                            <CardDescription className="text-sm">Per editor</CardDescription>
+                            <CardTitle className="font-medium">Basic</CardTitle>
+                            <span className="my-3 block text-2xl font-semibold">$9 / mo</span>
+                            <CardDescription className="text-sm">Single device streaming</CardDescription>
                         </CardHeader>
 
                         <CardContent className="space-y-4">
                             <hr className="border-dashed" />
 
                             <ul className="list-outside space-y-3 text-sm">
-                                {['Basic Analytics Dashboard', '5GB Cloud Storage', 'Email and Chat Support'].map((item, index) => (
+                                {[
+                                    '1,000+ Live TV Channels',
+                                    'HD Streaming Quality',
+                                    '24/7 Email Support',
+                                    'Compatible with All Devices'
+                                ].map((item, index) => (
                                     <li key={index} className="flex items-center gap-2">
                                         <Check className="size-3" />
                                         {item}
@@ -41,19 +46,27 @@ export default function Pricing1() {
                     </Card>
 
                     <Card className="relative">
-                        <span className="bg-linear-to-br/increasing absolute inset-x-0 -top-3 mx-auto flex h-6 w-fit items-center rounded-full from-purple-400 to-amber-300 px-3 py-1 text-xs font-medium text-amber-950 ring-1 ring-inset ring-white/20 ring-offset-1 ring-offset-gray-950/5">Popular</span>
+                        <span className="bg-linear-to-br/increasing absolute inset-x-0 -top-3 mx-auto flex h-6 w-fit items-center rounded-full from-purple-400 to-amber-300 px-3 py-1 text-xs font-medium text-amber-950 ring-1 ring-inset ring-white/20 ring-offset-1 ring-offset-gray-950/5">Most Popular</span>
 
                         <div className="flex flex-col">
                             <CardHeader>
-                                <CardTitle className="font-medium">Pro</CardTitle>
-                                <span className="my-3 block text-2xl font-semibold">$19 / mo</span>
-                                <CardDescription className="text-sm">Per editor</CardDescription>
+                                <CardTitle className="font-medium">Premium</CardTitle>
+                                <span className="my-3 block text-2xl font-semibold">$15 / mo</span>
+                                <CardDescription className="text-sm">Up to 3 devices</CardDescription>
                             </CardHeader>
 
                             <CardContent className="space-y-4">
                                 <hr className="border-dashed" />
                                 <ul className="list-outside space-y-3 text-sm">
-                                    {['Everything in Free Plan', '5GB Cloud Storage', 'Email and Chat Support', 'Access to Community Forum', 'Single User Access', 'Access to Basic Templates', 'Mobile App Access', '1 Custom Report Per Month', 'Monthly Product Updates', 'Standard Security Features'].map((item, index) => (
+                                    {[
+                                        'Everything in Basic Plan',
+                                        '5,000+ Live TV Channels',
+                                        '4K Streaming Quality',
+                                        'On-Demand Movies & Shows',
+                                        'Priority Chat Support',
+                                        'Multi-Device Streaming',
+                                        'Sports Package Included'
+                                    ].map((item, index) => (
                                         <li key={index} className="flex items-center gap-2">
                                             <Check className="size-3" />
                                             {item}
@@ -72,16 +85,22 @@ export default function Pricing1() {
 
                     <Card className="flex flex-col bg-transparent">
                         <CardHeader>
-                            <CardTitle className="font-medium">Startup</CardTitle>
-                            <span className="my-3 block text-2xl font-semibold">$29 / mo</span>
-                            <CardDescription className="text-sm">Per editor</CardDescription>
+                            <CardTitle className="font-medium">Ultimate</CardTitle>
+                            <span className="my-3 block text-2xl font-semibold">$25 / mo</span>
+                            <CardDescription className="text-sm">Up to 5 devices</CardDescription>
                         </CardHeader>
 
                         <CardContent className="space-y-4">
                             <hr className="border-dashed" />
 
                             <ul className="list-outside space-y-3 text-sm">
-                                {['Everything in Pro Plan', '5GB Cloud Storage', 'Email and Chat Support'].map((item, index) => (
+                                {[
+                                    'Everything in Premium Plan',
+                                    '10,000+ Live TV Channels',
+                                    'Exclusive PPV Events',
+                                    'VIP Phone Support',
+                                    'Global Channel Access'
+                                ].map((item, index) => (
                                     <li key={index} className="flex items-center gap-2">
                                         <Check className="size-3" />
                                         {item}
