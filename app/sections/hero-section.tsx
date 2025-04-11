@@ -1,14 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
-import { ArrowRight, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
-import { HeroHeader } from '@/app/sections/hero5-header'
 import { AnimatedGroup } from '../../components/ui/animated-group'
 import { TextEffect } from '../../components/ui/text-effect'
-import LogoCloud1 from '../../components/logo-cloud-1'
-import LogoCloud2 from '../../components/logo-cloud-2'
 import PricingBanner from './pricing-banner'
+import LogoCloud2 from './logo-cloud-2'
 
 const transitionVariants = {
   item: {
@@ -33,7 +30,6 @@ const transitionVariants = {
 export default function HeroSection() {
   return (
     <div id='features'>
-      <HeroHeader />
       <main className="overflow-hidden">
         <div
           aria-hidden

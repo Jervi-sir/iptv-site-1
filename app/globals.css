@@ -123,3 +123,24 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+.animate-breathe {
+  animation: breathe 6s ease-in-out infinite;
+  will-change: transform; /* Improves performance for animations */
+}
+
+.diagonal-pattern {
+  background-color: #00000010;
+  opacity: 1;
+  background: repeating-linear-gradient( -45deg, var(--background), var(--secondary) 1px, var(--background) 4px, var(--background) 10px );
+}

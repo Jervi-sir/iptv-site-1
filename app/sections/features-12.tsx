@@ -12,19 +12,19 @@ export default function Features12() {
 
     const images = {
         'item-1': {
-            image: '/channels-preview.png', // Replace with an image showing a channel grid or TV interface
+            image: 'https://images.immediate.co.uk/production/volatile/sites/3/2018/09/GettyImages-503685712-04cee8b.jpg?quality=90&resize=980,654', 
             alt: 'Thousands of Channels',
         },
         'item-2': {
-            image: '/global-content.png', // Replace with an image of international flags or global content
+            image: 'https://img.freepik.com/premium-photo/global-network-connection-illustrated-through-world-map-with-points-lines-representing-digital-business-connections-concept-global-network-connection-world-map-digital-business-connections_918839-57663.jpg?w=826', // Replace with an image of international flags or global content
             alt: 'Worldwide Content Access',
         },
         'item-3': {
-            image: '/multi-device.png', // Replace with an image of devices (TV, phone, tablet)
+            image: 'https://antmedia.io/wp-content/uploads/2020/12/multi-device-streaming.png', // Replace with an image of devices (TV, phone, tablet)
             alt: 'Multi-Device Streaming',
         },
         'item-4': {
-            image: '/hd-streaming.png', // Replace with an image showcasing HD/4K quality
+            image: 'https://img.freepik.com/free-photo/screen-that-come-life_52683-107523.jpg?t=st=1744392606~exp=1744396206~hmac=90d15f1c5fc31ea5354ae9d9091110e1d9232fa5c84f6f0c966df55d1af9b658&w=996', // Replace with an image showcasing HD/4K quality
             alt: 'High-Quality Streaming',
         },
     }
