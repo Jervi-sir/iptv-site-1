@@ -117,7 +117,7 @@ export default function HeroSection() {
                       asChild
                       size="lg"
                       className="rounded-xl px-5 text-base">
-                      <Link href="#link">
+                      <Link href="#pricing">
                         <span className="text-nowrap">Get Your IPTV Account Now</span>
                       </Link>
                     </Button>
@@ -128,7 +128,7 @@ export default function HeroSection() {
                     size="lg"
                     variant="ghost"
                     className="h-10.5 rounded-xl px-5">
-                    <Link href="#link">
+                    <Link href="#pricing">
                       <span className="text-nowrap">Explore Plans & Pricing</span>
                     </Link>
                   </Button>
