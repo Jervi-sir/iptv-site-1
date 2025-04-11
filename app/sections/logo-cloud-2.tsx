@@ -22,16 +22,14 @@ export default function LogoCloud2() {
     <section className="bg-transparent py-16">
       <div className="mx-auto max-w-5xl px-6">
         <h2 className="text-center text-lg font-medium">Your favorite companies are our partners.</h2>
-        <div className="mx-auto mt-20 flex max-w-4xl flex-wrap items-center justify-center gap-x-12 gap-y-4 sm:gap-x-16 sm:gap-y-10">
+        <div className="mx-auto mt-20 flex max-w-4xl flex-wrap items-center justify-center gap-x-0 gap-y-4 sm:gap-x-16 sm:gap-y-10">
           {partnerLogos.map((item, index) => (
             <img
               key={index}
-              className="h-10 w-fit animate-breathe"
+              className="h-12 md:w-fit animate-breathe"
               style={{ animationDelay: `${index * 0.2}s` }} // Stagger the animation start
               src={item.src}
               alt={item.alt}
-              height={item.height}
-              width="auto"
             />
           ))}
         </div>
