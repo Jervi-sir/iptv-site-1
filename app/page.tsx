@@ -1,5 +1,4 @@
 import Features1 from "@/app/sections/features-1";
-import Features12 from "@/app/sections/features-12";
 import Features4 from "@/app/sections/features-4";
 import HeroSection from "@/app/sections/hero-section";
 import Pricing1 from "@/app/sections/pricing-1";
@@ -17,13 +16,18 @@ export default function Home() {
       <HeroHeader />
       <HeroSection />
       <StatsSection />
-      <Pricing1 />
+      <div id="pricing" >
+        <Pricing1 />
+      </div>
       <IntegrationsSection />
       <CallToAction />
-      <WallOfLoveSection />
-      <Features12 />
+      <div id='feedback'>
+        <WallOfLoveSection />
+      </div>
       <Features1 />
-      <Features4 />
+      <div id='why_us'>
+        <Features4 />
+      </div>
       <FAQsTwo />
       <FooterSection />
     </>

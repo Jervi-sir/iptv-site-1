@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "get your IPTV",
-  description: "get your IPTV for now on",
+  title: process.env.NEXT_PUBLIC_SITE_NAME || "Jervi Media Saas", // Fallback if env var is missing
+  description: "Access a curated library of diverse content, anytime, anywhere.",
 };
 
 export default function RootLayout({
@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

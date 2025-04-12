@@ -1,5 +1,4 @@
-
-'use client'
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -10,7 +9,8 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Check } from 'lucide-react';
-import Link from 'next/link';
+import { PricingDrawer } from './pricing-drawer';
+import { DrawerTrigger } from '@/components/ui/drawer';
 
 // Define the type for a pricing plan
 interface PricingPlan {
@@ -28,139 +28,106 @@ interface PricingPlan {
 // Define the array of pricing plans with purchase data and Price IDs
 const pricingPlans: PricingPlan[] = [
   {
-    title: 'Basic',
+    title: 'Starter',
     price: '$9 / mo',
-    description: 'Single device streaming',
+    description: 'Stream on 1 device',
     features: [
-      '1,000+ Live TV Channels',
-      'HD Streaming Quality',
+      '5,000+ Live Channels',
+      'HD Streaming',
       '24/7 Email Support',
-      'Compatible with All Devices',
+      '1 Device Streaming',
     ],
     variant: 'outline',
     bgClass: 'bg-transparent',
-    purchases: 1200,
-    priceId: '',
+    purchases: 1500,
+    priceId: 'price_1O4oDNI8y7N0oWUMJD6wEvBh',
   },
   {
-    title: 'Premium',
+    title: 'Pro',
     price: '$15 / mo',
-    description: 'Up to 3 devices',
+    description: 'Stream on 3 devices',
     features: [
-      'Everything in Basic Plan',
-      '5,000+ Live TV Channels',
-      '4K Streaming Quality',
-      'On-Demand Movies & Shows',
+      '10,000+ Live Channels',
+      '4K Streaming Available',
+      'Sports & Movies Included',
       'Priority Chat Support',
-      'Multi-Device Streaming',
-      'Sports Package Included',
+      '3 Devices Streaming',
     ],
     isPopular: true,
     variant: 'default',
-    purchases: 3500,
-    priceId: '',
+    purchases: 4000,
+    priceId: 'price_1O4oCHI8y7N0oWUMfPrLKdd0',
   },
   {
-    title: 'Ultimate',
+    title: 'Elite',
     price: '$25 / mo',
-    description: 'Up to 5 devices',
+    description: 'Stream on 5 devices',
     features: [
-      'Everything in Premium Plan',
-      '10,000+ Live TV Channels',
-      'Exclusive PPV Events',
+      '15,000+ Live Channels',
+      '4K & HDR Streaming',
+      'Premium Sports Packages',
       'VIP Phone Support',
-      'Global Channel Access',
+      '5 Devices Streaming',
     ],
     variant: 'outline',
     bgClass: 'bg-transparent',
-    purchases: 800,
-    priceId: '',
+    purchases: 1000,
+    priceId: 'price_1O4opEI8y7N0oWUMgRSR1Cbu',
   },
 ];
 
 export default function Pricing1() {
-  // Function to handle button click and redirect
-  const handleUnlockClick = () => {
-    window.open('https://www.ammiteboune.com/#pricing_unlocked', '_blank');
-  };
-
   return (
-    <section id="pricing" className="py-16 md:py-32 relative">
+    <section className="py-16 md:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-2xl space-y-6 text-center">
           <h1 className="text-center text-4xl font-semibold lg:text-5xl">
-            Affordable IPTV Plans for Everyone
+            Best IPTV Plans – Save 20% Today
           </h1>
-          <p>
-            Choose a plan that fits your streaming needs and enjoy thousands of channels, movies,
-            and shows with no contracts or hidden fees.
+          <p id="pricing">
+            Choose your plan and stream thousands of live channels with no contracts or hidden fees.
           </p>
         </div>
-
-        {/* Pricing Cards with Blur and Pattern */}
-        <div className="relative">
-          <div className="diagonal-pattern">
-          {/* <div className=""> */}
-          {/* <div className="w-full absolute inset-0 right-0 ml-auto bg-[repeating-linear-gradient(-45deg,var(--color-border),var(--color-border)_1px,transparent_1px,transparent_8px)]"></div> */}
-          <div
-              className={`blur-md mt-8 pt-8 grid gap-6 md:mt-20 md:grid-cols-3 transition-all duration-300`}
-            >
-              {pricingPlans.map((plan, index) => (
-                <Card
-                  key={index}
-                  className={`flex flex-col ${plan.bgClass || ''} 
-                  ${ plan.isPopular ? 'relative' : 'hidden md:block' }
-                  `}
-                >
-                  {plan.isPopular && (
-                    <span className="bg-linear-to-br/increasing absolute inset-x-0 -top-3 mx-auto flex h-6 w-fit items-center rounded-full from-purple-400 to-amber-300 px-3 py-1 text-xs font-medium text-amber-950 ring-1 ring-inset ring-white/20 ring-offset-1 ring-offset-gray-950/5">
-                      Most Popular
-                    </span>
-                  )}
-
-                  <CardHeader>
-                    <CardTitle className="font-medium">{plan.title}</CardTitle>
-                    <span className="my-3 block text-2xl font-semibold">{plan.price}</span>
-                    <CardDescription className="text-sm">{plan.description}</CardDescription>
-                  </CardHeader>
-
-                  <CardContent className="space-y-4">
-                    <hr className="border-dashed" />
-                    <ul className="list-outside space-y-3 text-sm">
-                      {plan.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center gap-2">
-                          <Check className="size-3" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-
-                  <CardFooter className="mt-auto">
-                    <Button variant={plan.variant || 'default'} className="w-full">
-                        Get Started
-                    </Button>
-                  </CardFooter>
-                </Card>
-              ))}
-            </div>
-          </div>
-
-          {/* Unlock Button (Visible when blurred) */}
-          {true && (
-            <div className="absolute top-0 bottom-0 inset-0 flex flex-col gap-7 items-center justify-center">
-              <h1 className="text-center text-3xl font-semibold lg:text-5xl">Pricing</h1>
-              <Button
-                onClick={handleUnlockClick}
-                className="cursor-pointer bg-neutral-950 text-white hover:bg-amber-800"
-                size={'lg'}
-              >
-                Unlock Pricing Now!
-              </Button>
-            </div>
-          )}
+        <div className="mt-8 grid gap-6 md:mt-20 md:grid-cols-3">
+          {pricingPlans.map((plan, index) => (
+            <Card key={index} className={`flex flex-col ${plan.bgClass || ''} ${plan.isPopular ? 'relative' : ''}`}>
+              {plan.isPopular && (
+                <span className="bg-linear-to-br/increasing absolute inset-x-0 -top-3 mx-auto flex h-6 w-fit items-center rounded-full from-purple-400 to-amber-300 px-3 py-1 text-xs font-medium text-amber-950 ring-1 ring-inset ring-white/20 ring-offset-1 ring-offset-gray-950/5">
+                  Best Deal
+                </span>
+              )}
+              <CardHeader>
+                <CardTitle className="font-medium">{plan.title}</CardTitle>
+                <span className="my-3 block text-2xl font-semibold">{plan.price}</span>
+                <CardDescription className="text-sm">{plan.description}</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <hr className="border-dashed" />
+                <ul className="list-outside space-y-3 text-sm">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center gap-2">
+                      <Check className="size-3" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+              <CardFooter className="mt-auto">
+                <PricingDrawer
+                  triggerDrawerComponent={
+                    <DrawerTrigger asChild>
+                      <Button variant={plan.variant || 'default'} className="w-full cursor-pointer">
+                        Get This Deal
+                      </Button>
+                    </DrawerTrigger>
+                  }
+                  plan={plan as any}
+                />
+              </CardFooter>
+            </Card>
+          ))}
         </div>
       </div>
     </section>
-  );
+  )
 }
