@@ -9,72 +9,9 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Check } from 'lucide-react';
-import { PricingDrawer } from './pricing-drawer';
 import { DrawerTrigger } from '@/components/ui/drawer';
-
-// Define the type for a pricing plan
-interface PricingPlan {
-  title: string;
-  price: string;
-  description: string;
-  features: string[];
-  isPopular?: boolean;
-  variant?: 'outline' | 'default';
-  bgClass?: string;
-  purchases?: number;
-  priceId: string;
-}
-
-// Define the array of pricing plans with purchase data and Price IDs
-const pricingPlans: PricingPlan[] = [
-  {
-    title: 'Starter',
-    price: '$9 / mo',
-    description: 'Stream on 1 device',
-    features: [
-      '5,000+ Live Channels',
-      'HD Streaming',
-      '24/7 Email Support',
-      '1 Device Streaming',
-    ],
-    variant: 'outline',
-    bgClass: 'bg-transparent',
-    purchases: 1500,
-    priceId: 'price_1O4oDNI8y7N0oWUMJD6wEvBh',
-  },
-  {
-    title: 'Pro',
-    price: '$15 / mo',
-    description: 'Stream on 3 devices',
-    features: [
-      '10,000+ Live Channels',
-      '4K Streaming Available',
-      'Sports & Movies Included',
-      'Priority Chat Support',
-      '3 Devices Streaming',
-    ],
-    isPopular: true,
-    variant: 'default',
-    purchases: 4000,
-    priceId: 'price_1O4oCHI8y7N0oWUMfPrLKdd0',
-  },
-  {
-    title: 'Elite',
-    price: '$25 / mo',
-    description: 'Stream on 5 devices',
-    features: [
-      '15,000+ Live Channels',
-      '4K & HDR Streaming',
-      'Premium Sports Packages',
-      'VIP Phone Support',
-      '5 Devices Streaming',
-    ],
-    variant: 'outline',
-    bgClass: 'bg-transparent',
-    purchases: 1000,
-    priceId: 'price_1O4opEI8y7N0oWUMgRSR1Cbu',
-  },
-];
+import { PricingDrawer } from './pricing-drawer';
+import { pricingPlans } from '@/db/offers';
 
 export default function Pricing1() {
   return (
