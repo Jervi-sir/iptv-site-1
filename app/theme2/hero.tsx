@@ -37,7 +37,7 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
-              <Link href="/checkout">
+              <Link href={`${process.env.NEXT_PUBLIC_REDIRECT_TO}/checkout`}>
                 <Button className="btn-primary text-lg">Get Started</Button>
               </Link>
               <Link href="/#pricing">
