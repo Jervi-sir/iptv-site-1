@@ -15,7 +15,7 @@ export const ProvidersSection = () => {
 
   return (
     <div className="w-full flex flex-col flex-nowrap overflow-hidden [mask-image:linear-gradient(to_right,transparent_0,black_128px,black_calc(100%-128px),transparent_100%)]">
-      <div className="text-center text-2xl md:text-4xl font-semibold text-gray-800 pb-10">
+      <div className="text-center text-2xl md:text-4xl font-semibold text-gray-800 py-10">
         Enjoy{' '}
         <span className="inline-block gradient-heading">
           <Typewriter

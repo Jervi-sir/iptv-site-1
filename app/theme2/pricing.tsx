@@ -5,7 +5,7 @@ import { Check } from 'lucide-react';
 import Link from 'next/link';
 import { pricingPlans } from '@/db/offers';
 
-const PricingPlans = () => {
+const PricingPlans = ({ doRedirect = false }: { doRedirect?: boolean }) => {
   return (
     <section id="pricing" className="py-20 px-6 md:px-12 bg-gray-50">
       <div className="max-w-7xl mx-auto">
@@ -55,7 +55,7 @@ const PricingPlans = () => {
                   ))}
                 </ul>
                 <Link
-                  href={`${process.env.NEXT_PUBLIC_REDIRECT_TO}/checkout?plan=${plan.title.toLowerCase().replace(' ', '-')}`}
+                  href={doRedirect ? `${process.env.NEXT_PUBLIC_REDIRECT_TO}/checkout?plan=${plan.title.toLowerCase().replace(' ', '-')}` : `${plan.title.toLowerCase().replace(' ', '-')}`}
                   className="block w-full mt-auto"
                 >
                   <Button
