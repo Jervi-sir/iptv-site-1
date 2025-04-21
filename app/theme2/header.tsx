@@ -21,8 +21,8 @@ const Header = () => {
           <Link href="/" className="font-medium text-gray-700 hover:text-iptv-purple transition-colors">Home</Link>
           <Link href="/#pricing" className="font-medium text-gray-700 hover:text-iptv-purple transition-colors">Pricing</Link>
           <Link href="/#testimonials" className="font-medium text-gray-700 hover:text-iptv-purple transition-colors">Testimonials</Link>
-          <Link href={`${process.env.NEXT_PUBLIC_REDIRECT_TO}/checkout`}>
-            <Button className="btn-primary">Subscribe Now</Button>
+          <Link href={`#pricing`}>
+            <Button className="btn-primary">Free Trial</Button>
           </Link>
         </nav>
         
@@ -57,8 +57,8 @@ const Header = () => {
             >
               Testimonials
             </Link>
-            <Link href={`${process.env.NEXT_PUBLIC_REDIRECT_TO}/checkout`} onClick={() => setIsMenuOpen(false)}>
-              <Button className="btn-primary text-lg px-8 py-4">Subscribe Now</Button>
+            <Link href={`#pricing`} onClick={() => setIsMenuOpen(false)}>
+              <Button className="btn-primary text-lg px-8 py-4">Free Trial</Button>
             </Link>
           </nav>
         </div>

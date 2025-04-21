@@ -49,7 +49,9 @@
   --color-sidebar-border: hsl(220 13% 91%);
   --color-sidebar-ring: hsl(217 91% 60%);
 }
-
+html {
+  scroll-behavior: smooth;
+}
 /* Global styles (replacing * { @apply border-border }) */
 * {
   box-sizing: border-box;
@@ -163,4 +165,59 @@ body {
 
 .read-the-docs {
   color: hsl(0 0% 53%); /* #888 */
+}
+
+.animate-infinite-scroll {
+  animation: scroll 20s linear infinite;
+  display: flex;
+  flex-shrink: 0;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Ensure the container handles the overflow and mask */
+.w-full {
+  width: 100%;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* Typewriter effect */
+.typewriter {
+  display: inline-block;
+  overflow: hidden; /* Hide text beyond the current width */
+  border-right: 2px solid #6b21a8; /* Violet cursor, matching theme */
+  white-space: nowrap; /* Keep text on one line */
+  animation: 
+    typing 2s steps(20, end), /* Typing animation */
+    blink-caret 0.75s step-end infinite; /* Blinking cursor */
+}
+
+/* Typing animation: Gradually increase width to reveal text */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Blinking cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #6b21a8; }
 }
