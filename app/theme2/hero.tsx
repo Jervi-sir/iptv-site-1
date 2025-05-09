@@ -32,7 +32,7 @@ const Hero = () => {
               Upgrade Your, <span className="gradient-heading">IPTV</span> Experience to the Latest, <span className="gradient-heading">High-End</span> Standards!
             </h1>
 
-            <p className="text-md md:text-md text-gray-700">
+            <p className="text-md md:text-md text-white">
             +30,000 TV channels, including top-notch content from Netflix, Hulu, Apple TV+, Amazon Prime, Disney+, and HBO Max—all available on {process.env.NEXT_PUBLIC_SITE_NAME}
             </p>
 

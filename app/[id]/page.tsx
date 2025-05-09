@@ -1,6 +1,7 @@
 import { AnimatedSection } from "../theme2/animated-section";
 import PricingPlans from "../theme2/pricing";
 import Testimonials from "../theme2/testimonials";
+import Testimonials2 from "../theme2/testimonials-2";
 import { Theme2Layout } from "../theme2/theme2-layout";
 
 export default function Page() {
@@ -13,7 +14,7 @@ export default function Page() {
       </AnimatedSection>
       {/* Testimonials (3s animation) */}
       <AnimatedSection preset="blur-slide" duration={3}>
-        <Testimonials />
+        <Testimonials2 />
       </AnimatedSection>
     </Theme2Layout>
   );

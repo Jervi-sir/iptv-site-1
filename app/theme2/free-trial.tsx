@@ -66,7 +66,7 @@ export const FreeTrialSection = () => {
           </span>{' '}
           <span className="gradient-heading">Entertainment Journey</span>
         </h2>
-        <p className="text-lg text-[var(--color-muted-foreground)] max-w-2xl mx-auto mb-8">
+        <p className="text-lg text-white max-w-2xl mx-auto mb-8">
           Experience +30,000 channels, +141,000 movies, and +26,000 series with no commitment. Start your streaming adventure now!
         </p>
         <Link href={contacts.whatsapp}>
