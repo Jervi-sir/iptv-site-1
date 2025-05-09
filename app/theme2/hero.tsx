@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Tv, Wifi, Globe, Zap, MessageCircleIcon, MessageCircleCodeIcon, MessageCircleDashed } from 'lucide-react';
 import Link from 'next/link';
+import { contacts } from '@/db/contacts';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -36,7 +37,11 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-wrap gap-4 pt-0">
-              <Link href={`${process.env.NEXT_PUBLIC_REDIRECT_TO}/checkout`}>
+              <Link 
+                // href={`${process.env.NEXT_PUBLIC_REDIRECT_TO}/checkout`}
+                href={contacts.whatsapp}
+                target='_blank'
+              >
                 <Button className="btn-primary text-lg cursor-pointer"> <MessageCircleDashed /> WhatsApp</Button>
               </Link>
               <Link href="/#pricing">
