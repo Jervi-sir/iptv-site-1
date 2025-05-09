@@ -66,9 +66,9 @@ const Hero = () => {
 
           <div className={`${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
             <div className="card-highlight p-4 md:p-4 border-zinc-400 border-2 overflow-hidden">
-              <div className="relative rounded-lg overflow-hidden shadow-2xl">
+              <div className="relative rounded-lg overflow-hidden shadow-2xl aspect-video">
                 <div className="absolute inset-0 bg-gradient-to-br from-iptv-purple/90 to-iptv-blue/90 flex items-center justify-center">
-                  <img src='/feature/4.jpg' />
+                  <img src='/background-1.webp' />
                 </div>
               </div>
             </div>
