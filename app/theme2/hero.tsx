@@ -40,7 +40,7 @@ const Hero = () => {
                 <Button className="btn-primary text-lg cursor-pointer"> <MessageCircleDashed /> WhatsApp</Button>
               </Link>
               <Link href="/#pricing">
-                <Button variant="outline" className="text-lg cursor-pointer hover:bg-purple-200 hover:text-purple-800 hover:scale-105">View Plans</Button>
+                <Button variant="outline" className="text-lg cursor-pointer hover:bg-zinc-200 hover:text-zinc-800 hover:scale-105">View Plans</Button>
               </Link>
             </div>
 
@@ -65,8 +65,8 @@ const Hero = () => {
           </div>
 
           <div className={`${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
-            <div className="card-highlight p-4 md:p-4 border-violet-400 border-2 overflow-hidden">
-              <div className="relative rounded-lg overflow-hidden shadow-2xl aspect-video">
+            <div className="card-highlight p-4 md:p-4 border-zinc-400 border-2 overflow-hidden">
+              <div className="relative rounded-lg overflow-hidden shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-br from-iptv-purple/90 to-iptv-blue/90 flex items-center justify-center">
                   <img src='/feature/4.jpg' />
                 </div>
