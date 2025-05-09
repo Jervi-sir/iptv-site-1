@@ -27,7 +27,7 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className={`space-y-4 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-gray-100">
               Upgrade Your, <span className="gradient-heading">IPTV</span> Experience to the Latest, <span className="gradient-heading">High-End</span> Standards!
             </h1>
 

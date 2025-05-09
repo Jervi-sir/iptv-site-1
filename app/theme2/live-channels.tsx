@@ -13,7 +13,7 @@ export const LiveChannelsSection = () => {
   ];
 
   return (
-    <section id="live-channels" className="py-14 pb-20 px-6 md:px-12 bg-gray-50">
+    <section id="live-channels" className="py-14 pb-20 px-6 md:px-12 bg-zinc-950">
       <div className="max-w-2xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-8">
           More than <span className="gradient-heading">30,000 LIVE TV Channels</span>

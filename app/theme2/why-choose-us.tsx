@@ -15,37 +15,37 @@ export const WhyChooseUsSection = () => {
     {
       title: 'Antifreeze Technology',
       description: 'Seamless streaming with Antifreeze tech.',
-      icon: <Zap className="text-violet-600" size={32} />,
+      icon: <Zap className="text-zinc-500" size={32} />,
     },
     {
       title: 'Fortified Security Measures',
       description: 'Your safety, our priority.',
-      icon: <Shield className="text-violet-600" size={32} />,
+      icon: <Shield className="text-zinc-500" size={32} />,
     },
     {
       title: 'Cutting-Edge Servers',
       description: 'Top-tier performance guaranteed.',
-      icon: <Server className="text-violet-600" size={32} />,
+      icon: <Server className="text-zinc-500" size={32} />,
     },
     {
       title: 'Latest VODs & Series',
       description: 'Stay current, stay entertained.',
-      icon: <Video className="text-violet-600" size={32} />,
+      icon: <Video className="text-zinc-500" size={32} />,
     },
     {
       title: 'Affordable Rates',
       description: 'Quality at a great price.',
-      icon: <DollarSign className="text-violet-600" size={32} />,
+      icon: <DollarSign className="text-zinc-500" size={32} />,
     },
     {
       title: '24/7 Online Support',
       description: 'Always here for you.',
-      icon: <Headphones className="text-violet-600" size={32} />,
+      icon: <Headphones className="text-zinc-500" size={32} />,
     },
   ];
 
   return (
-    <section id="why-choose-us" className="py-20 px-6 md:px-12 bg-gray-50">
+    <section id="why-choose-us" className="py-20 px-6 md:px-12 bg-zinc-950">
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
           WHY <span className="gradient-heading">CHOOSE US</span>
@@ -84,13 +84,13 @@ export const WhyChooseUsSection = () => {
                   style={springProps}
                   onMouseEnter={handleHover}
                   onMouseLeave={handleUnhover}
-                  className="bg-white p-6 rounded-lg shadow-md"
+                  className="bg-zinc-900 p-6 rounded-lg shadow-md"
                 >
                   <div className="flex justify-center mb-4">{feature.icon}</div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                  <h3 className="text-xl font-semibold text-gray-300 mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600">{feature.description}</p>
+                  <p className="text-gray-200">{feature.description}</p>
                 </animated.div>
               </>
             );

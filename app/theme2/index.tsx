@@ -11,6 +11,7 @@ import { FreeTrialSection } from './free-trial';
 import { LiveChannelsSection } from './live-channels';
 import { WhyChooseUsSection } from './why-choose-us';
 import { AnimatedSection } from './animated-section';
+import Testimonials2 from './testimonials-2';
 
 export const Theme2 = () => {
   return (
@@ -45,7 +46,8 @@ export const Theme2 = () => {
       </AnimatedSection>
       {/* Testimonials (3s animation) */}
       <AnimatedSection preset="blur-slide" duration={3}>
-        <Testimonials />
+        {/* <Testimonials /> */}
+        <Testimonials2 />
       </AnimatedSection>
     </Theme2Layout>
   );

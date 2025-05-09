@@ -14,7 +14,7 @@ export const FreeTrialSection = () => {
 
   // React Spring animation for border-to-background effect
   const [borderProps, borderApi] = useSpring(() => ({
-    from: { height: '2px', bottom: '0', background: '#6b21a8' },
+    from: { height: '2px', bottom: '0', background: 'oklch(0.80 0.25 80)' }, // Bright gold
     config: { tension: 100, friction: 10 },
   }));
 
@@ -30,7 +30,7 @@ export const FreeTrialSection = () => {
     borderApi.start({
       height: '42px',
       bottom: '0',
-      background: 'rgba(107, 33, 168, 0.5)', // Light violet background
+      background: 'oklch(0.80 0.25 80)',
     });
   };
 
@@ -38,21 +38,21 @@ export const FreeTrialSection = () => {
     borderApi.start({
       height: '2px',
       bottom: '0',
-      background: '#6b21a8', // Violet border
+      background: 'oklch(0.80 0.25 80)',
     });
   };
 
   return (
-    <section id="free-trial" className="py-20 px-6 md:px-12 bg-gray-50">
+    <section id="free-trial" className="py-20 px-6 md:px-12 bg-[var(--color-background)]">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[var(--color-foreground)]">
           Unlock Your{' '}
           <span
             className="relative inline-block cursor-pointer"
             onMouseEnter={handleTextHover}
             onMouseLeave={handleTextUnhover}
           >
-            <span className='relative z-10'>Free 6-Hour Pass🚀</span>
+            <span className="relative z-10 hover:text-zinc-900">Free 6-Hour Pass🚀</span>
             <animated.div
               style={{
                 position: 'absolute',
@@ -62,12 +62,11 @@ export const FreeTrialSection = () => {
                 borderRadius: '0.25rem',
                 ...borderProps,
               }}
-            
             />
           </span>{' '}
-          <span className="gradient-heading"> Entertainment Journey</span>
+          <span className="gradient-heading">Entertainment Journey</span>
         </h2>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+        <p className="text-lg text-[var(--color-muted-foreground)] max-w-2xl mx-auto mb-8">
           Experience +30,000 channels, +141,000 movies, and +26,000 series with no commitment. Start your streaming adventure now!
         </p>
         <Link href={contacts.whatsapp}>
