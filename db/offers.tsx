@@ -29,7 +29,7 @@ export const pricingPlans: PricingPlan[] = [
     variant: 'outline',
     bgClass: 'bg-transparent',
     purchases: 2000, // Arbitrary value, adjust as needed
-    priceId: 'price_1O4oDNI8y7N0oWUMJD6wEvBh',
+    priceId: 'price_1RMunIGozbvJVw89jQ5DEKuB',
   },
   {
     title: '3 Months',
@@ -49,7 +49,7 @@ export const pricingPlans: PricingPlan[] = [
     variant: 'outline',
     bgClass: 'bg-transparent',
     purchases: 1500, // Arbitrary value
-    priceId: 'price_1O4oCHI8y7N0oWUMfPrLKdd0',
+    priceId: 'price_1RMupsGozbvJVw89fDBnt8qe',
   },
   {
     title: '6 Months',
@@ -69,7 +69,7 @@ export const pricingPlans: PricingPlan[] = [
     variant: 'outline',
     bgClass: 'bg-transparent',
     purchases: 1000, // Arbitrary value
-    priceId: 'price_1O4opEI8y7N0oWUMgRSR1Cbu',
+    priceId: 'price_1RMurVGozbvJVw89jhXKH96a',
   },
   {
     title: '12 Months',
@@ -90,6 +90,6 @@ export const pricingPlans: PricingPlan[] = [
     variant: 'default',
     bgClass: 'bg-transparent',
     purchases: 800, // Arbitrary value
-    priceId: 'price_1O4opEI8y7N0oWUMgRSR1Ccc',
+    priceId: 'price_1RMusbGozbvJVw8976c4CyhW',
   },
 ];
